@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       `INSERT INTO agents (name, type, description, capabilities, status) 
        VALUES (?, ?, ?, ?, 'active')`,
       [name, type, description, JSON.stringify(capabilities)]
-    );
+    ) as any[];
     await connection.end();
     
     return NextResponse.json({ 
