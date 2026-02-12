@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
     const [result] = await connection.execute(`
       INSERT INTO tasks (title, description, project_id, assigned_agent_id, priority, due_date, status) 
       VALUES (?, ?, ?, ?, ?, ?, 'pending')
-    `, [title, description, project_id, assigned_agent_id, priority, due_date]);
+    `, [title, description, project_id, assigned_agent_id, priority, due_date]) as any[];
     await connection.end();
     
     return NextResponse.json({ 
