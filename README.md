@@ -56,5 +56,6 @@ Automatic deployment to SiteGround via GitHub Actions on push to main branch.
 
 ---
 Test deployment 2026-02-12
+<!-- Deployment test 2: Node.js 20 fix -->
 
 Built with ❤️ by Simon Willer & AI Agents
